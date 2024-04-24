@@ -1,5 +1,5 @@
 -- uart_fsm.vhd: UART controller - finite state machine
--- Author(s): xvalen29
+-- Author(s): xmacakt00
 --
 LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;
