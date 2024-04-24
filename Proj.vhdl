@@ -80,6 +80,42 @@ BEGIN
         T12 <= '1';
         IF CLK2=1 AND DIN=0 THEN
             next_state <= BF
+        IF CLK2=1 AND DIN=1 THEN
+            next_state <= BF
+           
+           WHEN AF=>
+        A <= '0';
+        B <= '1';
+        C <= '0';
+        T8 <= '0';
+        T12 <= '1';
+        IF CLK2=1 AND DIN=0 THEN
+            next_state <= BF
+        IF CLK2=1 AND DIN=1 THEN
+            next_state <= BF
+
+            WHEN BT=>
+        A <= '1';
+        B <= '1';
+        C <= '0';
+        T8 <= '0';
+        T12 <= '1';
+        IF CLK2=1 AND DIN=0 THEN
+            next_state <= CF
+        IF CLK2=1 AND DIN=1 THEN
+            next_state <= CF
+           
+           WHEN BF=>
+        A <= '0';
+        B <= '1';
+        C <= '0';
+        T8 <= '0';
+        T12 <= '1';
+        IF CLK2=1 AND DIN=0 THEN
+            next_state <= CF
+        IF CLK2=1 AND DIN=1 THEN
+            next_state <= CF
+           
          WHEN OTHERS => NULL;
       END CASE;
    END PROCESS next_state_process;
