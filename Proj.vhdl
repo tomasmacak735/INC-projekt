@@ -45,7 +45,7 @@ BEGIN
             C <= '0';
             T8 <= '0';
             T12 <= '0';
-        IF CLK2=1 AND DIN=0 THEN
+        IF CLK2='1' AND DIN='0' THEN
             next_state <= delay
         END IF;
 
@@ -55,7 +55,7 @@ BEGIN
         C <= '0';
         T8 <= '1';
         T12 <= '0';
-        IF CLK2=1 THEN
+        IF CLK2='1' THEN
             next_state <= start
         END IF;
 
@@ -65,12 +65,12 @@ BEGIN
         C <= '0';
         T8 <= '0';
         T12 <= '1';
-        IF CLK2=1 AND DIN=0 THEN
+        IF CLK2='1' AND DIN='0' THEN
             next_state <= AF
         END IF;
-        IF CLK2=1 AND DIN=1 THEN
+        IF CLK2='1' AND DIN='1' THEN
             next_state <= AT
-        END IF;
+        END IF;            
 
         WHEN AT=>
         A <= '1';
