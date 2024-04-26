@@ -317,7 +317,6 @@ T12 <= '0';
 IF CLK2=1 AND DIN=1 THEN
 next_state <= IDLE;
 END IF;
-END IF;
          
       END CASE;
    END PROCESS next_state_process;
